@@ -1,2 +1,2 @@
-# browserutils
-Browser Util Functions in JavaScript
+# WebPage Utils
+ WebPage Util Functions in JavaScript
