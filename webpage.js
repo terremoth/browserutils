@@ -379,5 +379,13 @@ function getEndPoint() {
     return urlSplit.replace(/((\?)|(\/)|(\#)).*/, '');
 }
 
+
+function notNativeFunctions() { 
+    var Instance = eval('Function');
+	return Object.keys(window).filter(function (x) {
+		return window[x] instanceof Instance && !/\[native code\]/.test(window[x].toString());
+	});
+}
+
 // try cookies lang, language, see if is 2 chars or 2 chars + _ or - + 2 chars like en_US or en-es, try window.location.href if is "en.adobe.com" or something like "adobe.com/en" or so "adobe.com?lang=en" and get the "en" 
 function guessPageLanguage() {}
